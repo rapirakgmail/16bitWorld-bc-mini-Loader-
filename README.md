@@ -1,21 +1,16 @@
 # dos-SimpleLoader
-simple loader on dos 
+# รายละเอียด
+    - วัตถุประสงค์เพื่อเสริมความเข้าใจเกี่ยวกับกลไกลการทำงานของ loader module ของระบบปฎิบัติการ
+    - โปรแกรมรองรับเฉพาะระบบปฎิบัติการ DOS 16 bit และ DOXBOX
+    - โปรแกรมรองรับเฉพาะการโหลดแฟ้ม ".COM" เท่านั้น
+    - พัฒนาโดยใช้  Borland C (3.x) ที่ compile ด้วย tiny model
 
-1. SIMPLELD.C is a sample program that simulates the functionality of the DOS operating system.
-This program supports COM files only. (the source code using Borland C (version 3.x).
-
-  bcc simpleld.c
-
-------------------------------------------------------------------------------------------------
-
-
-2. APP2.C is a simple C program designed to serve as a sample application. The program must be converted into a .COM file before it can be used with the loader. The process consists of the following steps:
-
-2.1. Compile the Source Code
-      Use a DOS-based C compiler such as Borland C 3.1 to compile APP2.C into a standard EXE (Executable) file.
-          bcc app2.c
-      This will generate APP2.EXE.
-
-2.2. Convert the EXE to COM Format by using  "exe2bin" DOS utility
-     This is done using tools such as EXE2BIN, or by manually stripping the EXE header (in case of custom or low-level workflows).
-        exe2bin app2.exe app2.com
+# แฟ้ม
+  1. SIMPLELD.C : source file ของ loader
+     การ compile
+       bcc simpleld.c    (ได้ simpleld.exe) 
+  3. APP2.C : source file ของโปรแกรมตัวอย่าง
+     การ compile
+       bcc app2.c (ได้ app2.exe)
+       exe2bin app2.exe app2.com
+    NOTE : exe2bin โปรแกรมที่ทำหน้าที่แปลง ".EXE" ให้เป็น ".COM"
