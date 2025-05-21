@@ -11,6 +11,10 @@
        bcc simpleld.c    (ได้ simpleld.exe) 
   3. APP2.C : source file ของโปรแกรมตัวอย่าง
      การ compile
-       bcc app2.c (ได้ app2.exe)
+       bcc -mt app2.c (ได้ app2.exe)
        exe2bin app2.exe app2.com
     NOTE : exe2bin โปรแกรมที่ทำหน้าที่แปลง ".EXE" ให้เป็น ".COM"
+
+ # ขั้นตอนการเตรียม enviroment
+     1. ติดตั้ง DOSBOX หรือสร้าง VM ของ DOS16bit ตั้งแต่ 3.x หรือ freedos
+     2. ติดตั้ง Borland C (3.x)
