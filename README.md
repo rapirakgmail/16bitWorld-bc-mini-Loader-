@@ -8,21 +8,24 @@
 # แฟ้ม
   1. SIMPLELD.C : source file ของ loader
      การ compile
-       bcc simpleld.c    (ได้ simpleld.exe) 
+       bcc -mt simpleld.c    (ได้ simpleld.exe)
+      
   3. APP2.C : source file ของโปรแกรมตัวอย่าง
      การ compile
-       bcc -mt app2.c (ได้ app2.exe)
-       exe2bin app2.exe app2.com
-    NOTE : exe2bin โปรแกรมที่ทำหน้าที่แปลง ".EXE" ให้เป็น ".COM"
-
+       bcc -mt -lt app2.c     (ได้ app2.com)
+       
  # ขั้นตอนการเตรียม enviroment
      1. ติดตั้ง DOSBOX หรือสร้าง VM ของ DOS16bit ตั้งแต่ 3.x หรือ freedos
      2. ติดตั้ง Borland C (3.x)
      3. ติดตั้ง 7-Zip เพื่อแตกแฟ้ม ".img" ของ borlandc
            https://www.7-zip.org/
 
+ # การติดตั้ง DOSBOX
+ 1. Download  DOSBOX 
+      https://www.dosbox.com/wiki/Basic_Setup_and_Installation_of_DosBox
+    
  # การติดตั้ง Borland C++
- 1. Download Borland C++ 3.1 & Application Frameworks (3.5).7z
+ 1. Download โปรแกรม Borland C++ 3.1 & Application Frameworks (3.5).7z
         [https://winworldpc.com/product/borland-c/30]
         - แตกแฟ้ม Borland CPP 3.1 and Application Frameworks (1992) (3.5-1.44mb).7z
         - ใช้โปรแกรม 7z หรือ WinRar แตกแฟ้ม "Disk01.img , Disk02.img ,..., Disk15.img"
@@ -31,10 +34,11 @@
 
 
         # ติดตั้ง
+              MD DISKALL
               CD DISKALL
               INSTALL
 
-        1.1. แฟ้มที่แสดงรายชื่อว่า ".img" ถูก extract ครบ
+        1.1. รายชื่อแฟ้มที่ได้จากการ extract แฟ้ม  ".img"  
    ![image](https://github.com/user-attachments/assets/a13679fb-d213-421c-a84b-5d485f741994)
 
 
@@ -60,6 +64,8 @@
 
         
 
+ 2. ผลลัพธ์ที่ได้จากการ compile โดย โปรแกรม  "SIMPLELD.EXE"
+![image](https://github.com/user-attachments/assets/9d0e7456-bec2-42b6-aa94-fd31e4cb9006)
 
 
 
