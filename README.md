@@ -19,6 +19,9 @@
      2. ติดตั้ง Borland C (3.x)
      3. ติดตั้ง 7-Zip เพื่อแตกแฟ้ม ".img" ของ borlandc
            https://www.7-zip.org/
+    
+    NOTE :  การสร้าง enviroment ในการสร้รงโปรแกรม
+        https://github.com/rapirakgmail/16bitWorld-bcc-env/edit/main/README.md
 
  # การติดตั้ง DOSBOX
  1. Download  DOSBOX 
