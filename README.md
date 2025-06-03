@@ -25,10 +25,10 @@
 
  # การติดตั้ง DOSBOX
  1. Download  DOSBOX 
-      https://www.dosbox.com/wiki/Basic_Setup_and_Installation_of_DosBox
+      [https://www.dosbox.com/wiki/Basic_Setup_and_Installation_of_DosBox]
     
  # การติดตั้ง Borland C++
- 1. Download โปรแกรม Borland C++ 3.1 & Application Frameworks (3.5).7z
+ 2. Download โปรแกรม Borland C++ 3.1 & Application Frameworks (3.5).7z
         [https://winworldpc.com/product/borland-c/30]
         - แตกแฟ้ม Borland CPP 3.1 and Application Frameworks (1992) (3.5-1.44mb).7z
         - ใช้โปรแกรม 7z หรือ WinRar แตกแฟ้ม "Disk01.img , Disk02.img ,..., Disk15.img"
@@ -41,34 +41,36 @@
               CD DISKALL
               INSTALL
 
-        1.1. รายชื่อแฟ้มที่ได้จากการ extract แฟ้ม  ".img"  
+        2.1. รายชื่อแฟ้มที่ได้จากการ extract แฟ้ม  ".img"  
    ![image](https://github.com/user-attachments/assets/a13679fb-d213-421c-a84b-5d485f741994)
 
 
-        1.2. เลือก drive เก็บแฟ้มทั้งหมดของ Borland C++
+        2.2. เลือก drive เก็บแฟ้มทั้งหมดของ Borland C++
   ![image](https://github.com/user-attachments/assets/af933041-faed-460b-a208-c57f6e8783ec)
 
 
-        1.3. folder ที่เก็บแฟ้มทั้งหมดของ Borland C++
+        2.3. folder ที่เก็บแฟ้มทั้งหมดของ Borland C++
  ![image](https://github.com/user-attachments/assets/39d425bb-95cf-4549-aef3-6af81b0be3fc)
 
 
-        1.4. option ที่ใช้ install
+        2.4. option ที่ใช้ install
  ![image](https://github.com/user-attachments/assets/0df34462-3793-49b8-afe0-9c647aa99902)
 
 
-        1.5. กระบวนการ install สำเร็จ
+        2.5. กระบวนการ install สำเร็จ
   ![image](https://github.com/user-attachments/assets/6da94d35-e7b4-4179-bafc-841411c50d29)
 
 
-        1.6. กำหนด Path ใน การ compile
+        2.6. กำหนด Path ใน การ compile
 ![image](https://github.com/user-attachments/assets/730cc954-542a-4d48-8854-65457c126046)
 
 
         
 
- 2. ผลลัพธ์ที่ได้จากการ compile โดย โปรแกรม  "SIMPLELD.EXE"
-![image](https://github.com/user-attachments/assets/9d0e7456-bec2-42b6-aa94-fd31e4cb9006)
+ 3. ผลลัพธ์ที่ได้จากการ compile โดย โปรแกรม  "SIMPLELD.EXE"
+
+
+    ![image](https://github.com/user-attachments/assets/9d0e7456-bec2-42b6-aa94-fd31e4cb9006)
 
 
 
