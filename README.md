@@ -6,13 +6,13 @@
     - พัฒนาโดยใช้  Borland C (3.x) ที่ compile ด้วย tiny model
 
 # แฟ้ม
-  1. SIMPLELD.C : source file ของ loader
-     การ compile
-       bcc -mt simpleld.c    (ได้ simpleld.exe)
+      1. SIMPLELD.C : source file ของ loader
+             การ compile
+             bcc -mt simpleld.c    (ได้ simpleld.exe)
       
-  3. APP2.C : source file ของโปรแกรมตัวอย่าง
-     การ compile
-       bcc -mt -lt app2.c     (ได้ app2.com)
+      2. APP2.C : source file ของโปรแกรมตัวอย่าง
+            การ compile
+            bcc -mt -lt app2.c     (ได้ app2.com)
        
  # ขั้นตอนการเตรียม enviroment
      1. ติดตั้ง DOSBOX หรือสร้าง VM ของ DOS16bit ตั้งแต่ 3.x หรือ freedos
