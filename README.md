@@ -13,6 +13,12 @@
       2. APP2.C : source file ของโปรแกรมตัวอย่าง
             การ compile
             bcc -mt -lt app2.c     (ได้ app2.com)
+
+# Vdo  การ compile & run
+
+
+https://github.com/user-attachments/assets/7bf8b953-ca69-4ec1-a293-0b4c4aa5e048
+
        
  # ขั้นตอนการเตรียม enviroment
      1. ติดตั้ง DOSBOX หรือสร้าง VM ของ DOS16bit ตั้งแต่ 3.x หรือ freedos
