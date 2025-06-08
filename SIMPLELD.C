@@ -46,31 +46,11 @@ int readfile(char *fname,unsigned  segProcessAppAddr)
 }
 
 
-char far *firstInstrProcessApp;
 int loadApp(char *fname)
 {
-  unsigned  segProcessAppAddr;
-  char far *ptrProcessAppAddr;
+  unsigned  imageSeg;
   int res;
-  /*
-	allocate memory for app
-	unsigned _dos_allocmem(unsigned size, unsigned *segp);
-	size ³ The number of 16-byte paragraphs requested
-	segp ³ Pointer to a word that will be assigned the
-
-	segment address of the newly allocated block
-	On success,
-	 _dos_allocmem returns 0
-  */
-  /*
-  unsigned segProcessAppAddr;
-  char far *ptrProcessAppAddr;
-  int res;
-  unsigned int c_ax,c_bx,c_cx,c_dx;
-  unsigned int c_si,c_di,c_bp,c_sp;
-  unsigned int c_es,c_ds,c_ss;
-  void (far *directCall_setBank)(void);
-  */
+ 
   int appimagesize = getfilesize(fname);
   int num_para      = (appimagesize+15+0x100)/16;
   if(appimagesize <=0 ) {
@@ -78,26 +58,28 @@ int loadApp(char *fname)
 
   }
   printf("\nallocate memory for app  size = %d paragraph (%d byte)" , num_para,appimagesize);
-  res = _dos_allocmem( num_para , &segProcessAppAddr );
+  res = _dos_allocmem( num_para , &imageSeg );
   if(res != 0)
   {
 	printf("\ncannot allocate memory for run app  error : %d",res);
   }
 
-  printf("\nload app into memory at segment no. : %x", segProcessAppAddr);
+  printf("\nload app into memory at segment no. : %x", imageSeg);
   printf("\n\n\n");
 
-  readfile( fname, segProcessAppAddr );
+  readfile( fname, imageSeg );
 
-  firstInstrProcessApp = MK_FP(segProcessAppAddr, 0x0100);
-
-  asm  mov bx,word
-  asm  mov es,segProcessAppAddr
-  asm  mov ds,segProcessAppAddr
-  asm  mov ss,segProcessAppAddr
+  asm  mov es,imageSeg
+  asm  mov ds,imageSeg
+  asm  mov ss,imageSeg
+  
   asm  mov sp,0xFFFE
   asm  mov bp,sp
-  asm  jmp dword ptr [cs:firstInstrProcessApp]
+
+  asm  push es   	//cs
+  asm  mov ax,100h
+  asm  push ax		//ip
+  asm  retf			//pop cs , pop ip 
 
   return 0;
 }
